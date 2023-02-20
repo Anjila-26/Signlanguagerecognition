@@ -1,0 +1,96 @@
+.Welcome {
+    width: 542px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 240px;
+    left: 135px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+body {
+    background-color: #dddddd;
+    
+}
+.image {
+    width: 254px;
+    height: 245px;
+    opacity: 1;
+    position: absolute;
+    top: 139px;
+    left: 768px;
+    overflow: hidden
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    position: absolute;
+    top: 17px;
+    left: 450px;
+}
+
+
+.button{
+    
+    width: 275px;
+    height: 51px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    border: 1px solid rgba(255,255,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.detect {
+    width: 156px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 13px;
+    left: 57px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+
+.container
+{
+    width: 90%;
+    padding:20px ;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+}
+.box
+{
+width: 290px ;
+margin: 0 10px;
+box-shadow: 0 0 20px 2px rgba(0,0,0,0.1);
+transition: 1s;
+
+}
+.box img
+{
+display: block;  
+width: 100% ;
+border-radius: 5px ;
+}
+.box:hover
+{
+transform:scale(1.3);
+z-index: 20;
+}

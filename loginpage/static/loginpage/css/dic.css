@@ -1,0 +1,109 @@
+body {
+    background-color: #D22B2B	;
+}
+
+.ANList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ANList button {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: #D22B2B	;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: none;
+    margin: 20px;
+    padding: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: azure;
+}
+
+.ANList button:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+
+.OZList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.OZList button{
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: #D22B2B	;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: none;
+    margin: 20px;
+    padding: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: azure;
+}
+
+  .OZList button:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+  }
+
+  .UZList {
+    
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.UZList button{
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: #D22B2B	;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: none;
+    margin: 20px;
+    padding: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: azure;
+}
+
+  .UZList button:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+  }
+
+

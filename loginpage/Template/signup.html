@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+        <title>Login</title>
+        <meta name = "description" content = "">
+        <meta name = "viewport" content = "width = device-width , initial-scale = 1">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />>
+        <link rel = "stylesheet" href = "{% static 'loginpage\css\fp.css'%}">
+    </head>
+    <body>
+        <div class = "signify">
+            <h1> SIGNBLOOM </h1>
+        </div>
+        <div class = "signup2">
+            <h3> SIGN UP </h3>
+        </div>
+
+        {% for message in messages %}
+        <div class = "alert alert-{{message.tag}} alert-dimissible fade show" role = "alert">
+        <strong>Message:</strong>{{message}}
+        <button type="button" class="close" data-dismiss = "alert" arial-label = "Close">
+        <span aria-hidden = "true">&times;</span>
+        </button>
+        </div>
+        {% endfor %}    
+
+        <div class = "icon2">
+            <div class = "img2">
+                <img src = "{% static 'loginpage/media/icon.png' %}" alt = "Deaf" style="width:80px;height:80px;">
+            </div>
+        </div>
+
+
+        <form action="/signup" method = "post">
+        {% csrf_token %}
+            <div class="username2">
+            <label for="">Username:* </label>
+            </div>
+            <div class="username_box2">
+            <input type = "text" id = "Username" name = "Username" placeholder = "Enter Username" Required>
+            </div>
+
+            <div class = "FirstName">
+                <label for="">FirstName:*</label>
+            </div>
+            <div class= "FirstName_box">
+            <input type = "text" id = "FirstName" name = "FirstName" placeholder = "Enter FirstName" Required>
+            </div>
+            <div class = "LastName">
+                <label for="">LastName:*</label>
+            </div>
+            <div class = "LastName_box">
+                <input type = "text" id = "LastName" name = "LastName" placeholder = "Enter LastName" Required>
+            </div>
+
+            <div class = "Email2">
+                <label for="">Email:*</label>
+            </div>
+     
+            <div class = "Email_box">
+                <input type = "email" id = "Email" name = "Email" placeholder = "Enter Email" Required>
+            </div>
+            
+            <br>
+            <div class="password2">
+            <label for="">Password:*</label>
+            </div>
+            <div class = "password_box2">
+            <input type = "password" id = "Password" name = "Password" placeholder = "Enter Password" Required>
+            </div>
+            <br>
+            <div class = "Confirm_Password">
+                <label for="">Confirm Password:*</label>
+            </div>
+            <div class = "Confirm_Password_box">
+                <input type = "password" id = "Confirm" name = "Confirm" placeholder = "Confirm Password" Required>
+            </div>
+            <button type = "submit" class = "btn"><span class = "Signin2">Signup</span></button>
+            
+            
+
+        </form>
+
+
+        <script src = "" async defer></script>
+    </body>
+
+</html>

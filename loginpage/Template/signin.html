@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+        <title>Login</title>
+        <meta name = "description" content = "">
+        <meta name = "viewport" content = "width = device-width , initial-scale = 1">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
+        <link rel = "stylesheet" href = "{% static 'loginpage/css/style.css'%}">
+    </head>
+    <body>
+
+        {% for message in messages %}
+        <div class = "alert alert-{{message.tag}} alert-dimissible fade show" role = "alert">
+        <strong>Message:</strong>{{message}}
+        <button type="button" class="close" data-dismiss = "alert" arial-label = "Close">
+        <span aria-hidden = "true">&times;</span>
+        </button>
+        </div>
+        
+        {% endfor %}
+        <div class="column">
+            <img src = "{% static 'loginpage/media/images.jpg' %}" alt = "Deaf" style="width:713px;height:768px;">
+        </div>
+
+        <div class = "icon">
+            <div class = "img2">
+                <img src = "{% static 'loginpage/media/icon.png' %}" alt = "Deaf" style="width:80px;height:80px;">
+            </div>
+        </div>
+
+        <span class="signbloom">SIGNBLOOM</span>
+        <span class="login">Login</span>
+
+        <button type = "submit" class="ggle">
+            <span class="signinggl">Sign in with Google</span>
+            <div class="google">
+                <img src = "{% static 'loginpage/media/google.png' %}" alt = "Deaf" style="width:29.77px;height:29.61px;">
+            </div>
+        </button>
+
+        <span class="or">or sign in with email</span>
+
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+
+        <a href="" class="forget">Forget Password?</a>
+        <form action="/signin" method = "post">
+            {% csrf_token %}
+                <div class="username">
+                <label for="">Username:* </label>
+                </div>
+                <div class="username_box">
+                <input type = "text" id = "Username" name = "Username" placeholder = "Enter Username" Required>
+                </div>
+                <br>
+                <div class="password">
+                <label for="">Password:*</label>
+                </div>
+                <div class = "password_box">
+                <input type = "password" id = "Password" name = "Password" placeholder = "Enter Password" Required>
+                </div>
+                <br>
+                <button type = "submit" class = "button"><span class="v4_53">Login</span></button>  
+            </div> 
+            </form>
+
+            <label class="container"><span class="remember">Remember me</span>
+                <input type="checkbox" checked = "checked">
+                <span class = "checkmark"></span>
+            </label>
+
+            <span class="notyet">Not registered yet?<a href='signup' class="account">Create an Account</a></span>
+
+        <script src = "" async defer></script>
+    </body>
+</html>

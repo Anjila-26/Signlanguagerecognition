@@ -1,0 +1,233 @@
+.signify {
+    width: 214px;
+    height: 47px;
+    color: rgba(255,0,0,1);
+    position: absolute;
+    top: 10px;
+    left: 209px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+
+.signup2 {
+    width: 145px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 136px;
+    left: 86px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+
+.icon2 {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    left: 86px;
+}
+
+.username2 {
+    width: 109px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 233px;
+    left: 86px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.username_box2 {
+    width: 469px;
+    height: 56.46px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 260px;
+    left: 98px;
+}
+
+.password2 {
+    width: 114px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 355.84px;
+    left: 715px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.password_box2 {
+    width: 471px;
+    height: 56.46px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 392px;
+    left: 727px;
+}
+
+input{
+    width: 438.78px;
+    height: 56.46px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    border: 1px solid rgba(187,187,187,1);
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    overflow: hidden;
+}
+
+.FirstName {
+    width: 114px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 336px;
+    left: 86px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.FirstName_box {
+    width: 469px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 372px;
+    left: 98px;
+}
+
+.LastName {
+    width: 114px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 455px;
+    left: 86px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.LastName_box {
+    width: 469px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 491px;
+    left: 98px;
+}
+
+.Email2 {
+    width: 69px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 220px;
+    left: 715px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.Email_box {
+    width: 469px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 273px;
+    left: 727px;
+}
+
+.signup3 {
+    width: 203px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 586px;
+    left: 583px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+
+.btn {
+    width: 438px;
+    height: 51px;
+    background: rgba(255,3,3,1);
+    opacity: 1;
+    position: absolute;
+    top: 576px;
+    left: 464px;
+    border: 1px solid rgba(255,255,255,1);
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    overflow: pointer;
+    cursor: pointer;
+}
+
+
+.Confirm_Password {
+    width: 190px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 462px;
+    left: 715px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.Confirm_Password_box {
+    width: 471px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 498px;
+    left: 727px;
+
+}
+
+
+.Signin2 {
+    width: 203px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 10px;
+  left: 118px;
+  font-family: DM Sans;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
