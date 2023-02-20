@@ -5,3 +5,4 @@ Go to the New folder
 
 This is the django file created for the simple sign language recognition web application
 
+This project is the winner of All Nepal Largest Female hackathon
