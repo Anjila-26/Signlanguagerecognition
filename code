@@ -1,0 +1,133 @@
+import numpy as np
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import seaborn as sns;
+import random
+import tensorflow as tf
+from tensorflow import keras
+from keras import Sequential
+from keras.layers import Flatten, Dense,BatchNormalization,Dropout,Input
+from keras.models import Sequential, Model
+from keras.layers import Conv2D
+from keras import datasets, layers, models
+from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate, Conv2DTranspose, BatchNormalization, Dropout, Lambda
+from sklearn.metrics import accuracy_score, precision_score,recall_score,f1_score
+from keras.preprocessing.image import ImageDataGenerator
+
+
+train = pd.read_csv('sign_mnist_train.csv')
+test = pd.read_csv('sign_mnist_test.csv')
+
+print(train.head(10))
+print(test.head(10))
+
+
+cols =train.columns
+colours = ['#747BA1', '#FFBA77'] # specify the orange  - yellow is missing. blue is not missing.
+sns.heatmap(train[cols].isnull(), cmap=sns.color_palette(colours))
+labels = train['label'].values
+
+cols =test.columns
+colours = ['#747BA1', '#FFBA77'] # specify the orange  - yellow is missing. blue is not missing.
+sns.heatmap(test[cols].isnull(), cmap=sns.color_palette(colours))
+
+train.isna().sum().sort_values(ascending=True)
+
+test.isna().sum().sort_values(ascending=True)
+
+train = train.drop_duplicates()
+test  = test.drop_duplicates()
+
+print(train.shape)
+print(test.shape)
+
+unique_val = np.array(labels)
+print(np.unique(unique_val))
+
+label = train['label']
+train = train.drop(['label'],axis=1)
+
+test_label = test['label']
+test = test.drop(['label'],axis=1)
+
+print(label)
+
+print(train.shape)
+print(test.shape)
+print(label.shape)
+print(test_label.shape)
+
+sns.countplot(x= label)
+plt.show()
+
+
+# Normalizing the data
+train = train / 255
+test = test / 255
+
+train = np.array(train)
+test  = np.array(test)
+
+train = train.reshape(train.shape[0],28,28,1)
+test  = test.reshape(test.shape[0],28,28,1)
+
+print(train.shape)
+print(test.shape)
+
+image_x = random.randint(0,len(test))
+plt.imshow(np.reshape(train[image_x],(28,28)))
+plt.title('Train Image')
+plt.show()
+plt.imshow(np.reshape(test[image_x],(28,28)))
+plt.title('Test Image')
+plt.show()
+
+model = models.Sequential()
+model.add(layers.Conv2D(64,(3,3),padding ='Same',activation = 'relu',input_shape=(28,28,1)))
+model.add(Dropout(0.1))
+model.add(BatchNormalization())
+model.add(layers.MaxPooling2D(2,2))
+model.add(Dropout(0.3))
+model.add(layers.Conv2D(128,(3,3),padding ='same',activation='relu'))
+model.add(BatchNormalization())
+model.add(layers.MaxPooling2D(2,2))
+model.add(Dropout(0.3))
+model.add(layers.Conv2D(128,(3,3),padding ='same',activation='relu'))
+model.add(BatchNormalization())
+model.add(layers.MaxPooling2D(2,2))
+
+model.summary()
+
+model.add(layers.Flatten())
+model.add(layers.Dense(128, activation='relu'))
+model.add(Dropout(0.2))
+model.add(layers.Dense(25, activation ='softmax'))
+
+model.summary()
+
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),metrics=['accuracy'])
+
+history = model.fit(train,label,epochs=10,validation_data=(test,test_label))
+
+model.evaluate(test, test_label)
+
+#get predection
+predictions = model.predict(test)
+predictions = np.argmax(predictions, axis = 1)
+print(predictions[5])
+
+plt.imshow(np.reshape(test[5],(28,28)))
+plt.title('Test Image')
+plt.show()
+
+plt.plot(history.history['accuracy'], label='accuracy')
+plt.plot(history.history['val_accuracy'], label = 'val_accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.ylim([0.5, 1])
+plt.legend(loc='lower right')
+
+test_loss, test_acc = model.evaluate(test,  test_label, verbose=2)
+
+model.save("action.h5")
