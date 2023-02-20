@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
+        <title>SignBloom</title>
+        <meta name = "description" content = "">
+        <meta name = "viewport" content = "width = device-width , initial-scale = 1">
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" href="faviconfinal.ico" type="image/x-icon"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&amp;display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "{% static 'loginpage/css/main_file.css'%}">
+    </head>
+    <body>  
+        <body>  
+            <h1>Sign Language Translator</h1>
+            <form action="/english" method="get">
+              {% csrf_token %}
+              <div class="input"></div>
+              <input type="text" name="text">
+              <input type="submit" value="Translate">
+            </form>
+            {% if transcribed_words_and_image_paths %}
+              <h2>Sign Language Translation:</h2>
+              {% for item in transcribed_words_and_image_paths %}
+            <div>
+                <p>{{ item.word }}</p>
+                {% for path in item.paths %}
+                <img src="{% static 'loginpage/hand'%}"/>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <script src="" async defer></script>
+          </body>
+          </html>          

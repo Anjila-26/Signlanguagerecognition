@@ -1,0 +1,6 @@
+0 A
+1 B
+2 Hello
+3 I
+4 I love you
+5 Yes

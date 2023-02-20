@@ -1,0 +1,252 @@
+
+*
+{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    position: absolute;
+    top: 17px;
+    left: 450px;
+}
+
+.backgroundd {
+
+    width: 0px; height: px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.button{
+    
+    width: 275px;
+    height: 51px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    border: 1px solid rgba(255,255,255,1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.detect {
+    width: 156px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 13px;
+    left: 57px;
+    font-family: DM Sans;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.Header
+{
+    width: 1600px; height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav
+{
+
+    width: 75%;
+    height : 10vh;
+    color: black; display: flex; justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+
+
+}
+nav .logo
+{
+    width: 25%;
+    text-align: center;
+  
+}
+
+
+
+div.tool a 
+{
+    text-decoration-line: none;
+    color: black;
+    font-size:x-large;
+    line-height: 9px;
+    text-decoration: none;
+    padding: 60;
+    margin: 80;
+    border-radius: 15px;
+    margin-right: 60px;
+}
+/* nav.tool a:first-child
+{
+    color: white;
+} */
+/* how to center a div */
+main
+{
+    width: 75%;
+    margin-left: 25%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+
+
+}
+
+section h3
+{
+    font-size: 30px; font-weight: 150;
+    letter-spacing:3px ;
+    text-shadow: 1px 1px black;
+
+
+}
+
+section h1
+{
+    margin: 20px 0 20px 0;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section p
+{
+
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px ;
+}
+
+section a
+{
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color:  rgb(233, 16, 31);
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    transition: all .5s ease;
+}
+section .btnone
+{
+    background-color: white ;
+    text-decoration-line: none;
+    text-decoration-color: rgb(233, 16, 31);
+
+}
+
+section .btntwo
+{
+    background-color:  rgb(233, 16, 31);
+    color: white;
+    text-decoration-line: none;
+
+
+}
+.btnone:hover
+{
+    background-color:  rgb(233, 16, 31);
+    color: white;
+    text-decoration-line: none;
+
+}
+.btntwo:hover
+{
+    background-color: white ;
+    color:   rgb(233, 16, 31);
+    text-decoration-line: none;
+}
+
+
+.Home:hover
+{
+    background-color: black ;
+    text-decoration-line: none;
+    color: black;
+    transition:all .5s ease;
+
+}
+.Options:hover
+{
+    background-color: Red ;
+    text-decoration-line: none;
+    color: white;
+    transition: all .5s ease;
+
+}
+.About_us:hover
+{
+    background-color: red ;
+    text-decoration-line: none;
+    color:white;
+    transition: all .5s ease;
+
+}
+.Reviews:hover
+{
+    background-color: red ;
+    text-decoration-line: none;
+    color: white;
+    transition: all .5s ease;
+
+}
+
+
+.change::after
+{
+content: "";
+animation: changetext 10s infinite linear;
+color:  rgb(233, 16, 31);
+font-size: 65;
+
+}
+@keyframes changetext
+{
+    0%{content: "Learning";}
+    10%{content: "Innovating";}
+    20%{content: "Helping";}
+    30%{content: "Understanding";}
+    40%{content: "Growing";}
+    
+
+        
+}
+
+.gift {
+    opacity: 1;
+    position: absolute;
+    top : 20%;
+    left: 0;
+    overflow: hidden
+}
+   
